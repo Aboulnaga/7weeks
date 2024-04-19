@@ -1,0 +1,67 @@
+#feature {
+  /* background-color: red; */
+  padding: 2rem 0;
+}
+
+#feature .container {
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+  /* grid-template-columns: auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#feature .container > div {
+  flex: 1 0 160px;
+  /* background-color: blue; */
+  height: 200px;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid rgba(var(--primRgb), 0.2);
+  border-radius: 0.5rem;
+}
+
+#feature .container > div p {
+  /* background-color: red; */
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: var(--smf8);
+}
+
+#feature .container > div:nth-child(1) p {
+  background-color: #ebbcbc;
+}
+#feature .container > div:nth-child(2) p {
+  background-color: #cdebbc;
+}
+#feature .container > div:nth-child(3) p {
+  background-color: #d1e8f2;
+}
+#feature .container > div:nth-child(4) p {
+  background-color: #cdd4f8;
+}
+#feature .container > div:nth-child(5) p {
+  background-color: #f6dbf6;
+}
+#feature .container > div:nth-child(6) p {
+  background-color: #fff2e5;
+}
+
+#feature .container > div:hover {
+  /* background-color: rgba(var(--secRgb), 0.2); */
+  box-shadow: 1px 1px 10px rgba(var(--secRgb), 0.2),
+    -1px -1px 10px rgba(var(--secRgb), 0.2);
+}
+
+#feature .container > div img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+}

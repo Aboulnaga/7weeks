@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --prim: #1a1a1a;
+  --primRgb: 26, 26, 26;
+  --sec: #088178;
+  --secRgb: 8, 129, 120;
+  --blue: #e3e6f3;
+  --blueRgb: 227, 230, 243;
+
+  --prim-font: "Roboto", sans-serif;
+  --sec-font: "Montserrat", sans-serif;
+
+  --smf9: 0.9rem;
+  --smf8: 0.8rem;
+  --smf7: 0.7rem;
+  --smf6: 0.6rem;
+  --smf5: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+/* Headings */
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px; /* Significantly larger for main headings */
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px; /* Larger than h3, still significant */
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px; /* Smaller than h2, still clear and readable */
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px; /* Smaller than h3, suitable for subheadings */
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px; /* Smaller than h4, good for sub-subheadings */
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px; /* Smallest heading, suitable for small details */
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+/* Paragraphs */
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; /* Comfortable size for body text */
+  line-height: 1.5; /* Adequate spacing for readability */
+  letter-spacing: 0.5px;
+}
+
+/* body {
+  font-family: "Poppins", monospace, system-ui;
+  color: var(--prim);
+  min-height: 100vh;
+}
+h1 {
+  font-family: 50px;
+  line-height: 64px;
+  font-size: 60px;
+  color: #222;
+}
+h2 {
+  font-size: 46px;
+  line-height: 64px;
+  color: #222;
+}
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+h5 {
+  font-size: 16px;
+  color: #222;
+}
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+} */
+.section-p1 {
+  padding: 40px 80px;
+}
+.section-m1 {
+  margin: 40px 0;
+}
+
+button {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0.5rem 0.75rem;
+}
+
+button:active {
+  scale: 0.95;
+}
+
+button:focus {
+  outline: 1px solid var(--prim);
+}
+
+/* button.normal {
+  font-size: 14px;
+  padding: 15px 30px;
+  font-weight: 600;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #000;
+  border: none;
+  transition: 0.2s ease;
+  outline: none;
+  cursor: pointer;
+}
+button.white {
+  font-size: 13px;
+  padding: 11px 18px;
+  font-weight: 600;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #fff;
+  border: 1px solid white;
+  transition: 0.2s;
+  outline: none;
+  cursor: pointer;
+} */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+svg {
+  fill: var(--prim);
+  stroke: var(--prim);
+  pointer-events: none;
+}
+
+svg:active {
+  scale: 0.95;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.icon {
+  font-weight: 800;
+}
+
+.max {
+  width: 90%;
+  margin: 0 auto;
+}
+@media (width> 768px) {
+  .max {
+    width: 85%;
+  }
+}

@@ -1,0 +1,112 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  height: 10vh;
+  padding: 1rem 0;
+  background-color: rgba(var(--blueRgb), 0.7);
+  backdrop-filter: blur(10px);
+  color: var(--prim);
+  box-shadow: 1px 1px 10px rgba(var(--primRgb), 0.2);
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo h1 {
+  font-size: 16px;
+}
+header .logo a {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--sec);
+  }
+}
+
+#main-nav {
+  display: none;
+}
+
+#main-nav ul {
+  display: flex;
+  align-items: center;
+}
+
+#main-nav a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--prim);
+  font-weight: 400;
+  transition: 0.3s ease-in-out;
+}
+
+#main-nav a:hover {
+  color: var(--sec);
+}
+
+#main-nav a:focus {
+  color: var(--sec);
+}
+
+#main-nav a:active {
+  color: var(--sec);
+  scale: 0.95;
+}
+
+#main-nav .active {
+  color: var(--prim);
+  position: relative;
+}
+
+#main-nav .active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40%;
+  left: 16%;
+  height: 1px;
+  background-color: var(--prim);
+  margin-top: 0.2rem;
+}
+
+#main-nav .icon {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--sec);
+}
+
+#right-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  .icon {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--sec);
+  }
+  #burger-menu {
+    font-size: 20px;
+    font-weight: 800;
+    pointer-events: all;
+    cursor: pointer;
+  }
+}
+
+@media (width > 768px) {
+  #right-nav {
+    display: none;
+  }
+  #main-nav {
+    display: flex;
+  }
+}
