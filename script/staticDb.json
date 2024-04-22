@@ -1,0 +1,182 @@
+{
+  "staticDb": [
+    {
+      "id": "s-1",
+      "image": "./img/products/f1.jpg",
+      "brand": "Adidas",
+      "title": "Cartoon Astronaut T-Shirts",
+      "rating": { "count": 350, "rate": 4.5 },
+      "price": 78,
+      "category": "men t-shirt",
+      "status": "featured",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+    {
+      "id": "s-2",
+      "image": "./img/products/f2.jpg",
+      "brand": "Adidas",
+      "title": "Cartoon Summer T-Shirts",
+      "rating": { "count": 350, "rate": 4 },
+      "price": 85,
+      "category": "men t-shirt",
+      "status": "featured",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+    {
+      "id": "s-3",
+      "image": "./img/products/f3.jpg",
+      "brand": "Adidas",
+      "title": "Cartoon Flowers T-Shirts",
+      "rating": { "count": 350, "rate": 3.5 },
+      "price": 105,
+      "category": "men t-shirt",
+      "status": "featured",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+    {
+      "id": "s-4",
+      "image": "./img/products/f4.jpg",
+      "brand": "Beko",
+      "title": "White Special Shirts",
+      "rating": { "count": 350, "rate": 3.5 },
+      "price": 65,
+      "category": "men t-shirt",
+      "status": "featured",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+    {
+      "id": "s-5",
+      "image": "./img/products/f5.jpg",
+      "brand": "Nike",
+      "title": "F-Top",
+      "rating": { "count": 350, "rate": 4 },
+      "price": 80,
+      "category": "men t-shirt",
+      "status": "featured",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+    {
+      "id": "s-6",
+      "image": "./img/products/f6.jpg",
+      "brand": "versace",
+      "title": "Open Pro-Shirt Z18",
+      "rating": { "count": 350, "rate": 4.7 },
+      "price": 150,
+      "category": "men t-shirt",
+      "status": "featured",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+    {
+      "id": "s-7",
+      "image": "./img/products/f7.jpg",
+      "brand": "Zara",
+      "title": "Flower Down W10",
+      "rating": { "count": 350, "rate": 4.2 },
+      "price": 40,
+      "category": "men t-shirt",
+      "status": "featured",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+    {
+      "id": "s-8",
+      "image": "./img/products/f8.jpg",
+      "brand": "Gucci",
+      "title": "Woman's Dress",
+      "rating": { "count": 350, "rate": 4.5 },
+      "price": 170,
+      "category": "women t-shirt",
+      "status": "featured",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+    {
+      "id": "s-9",
+      "image": "./img/products/n1.jpg",
+      "brand": "Adidas",
+      "title": "Open top shirt",
+      "rating": { "count": 350, "rate": 3.8 },
+      "price": 99,
+      "category": "men t-shirt",
+      "status": "new",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+    {
+      "id": "s-10",
+      "image": "./img/products/n2.jpg",
+      "brand": "Puma",
+      "title": "Close-T 6",
+      "rating": { "count": 350, "rate": 3.5 },
+      "price": 55,
+      "category": "men t-shirt",
+      "status": "new",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+    {
+      "id": "s-11",
+      "image": "./img/products/n3.jpg",
+      "brand": "Adidas",
+      "title": "Clear white y-23",
+      "rating": { "count": 350, "rate": 4.5 },
+      "price": 110,
+      "category": "men t-shirt",
+      "status": "new",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+    {
+      "id": "s-12",
+      "image": "./img/products/n4.jpg",
+      "brand": "Beko",
+      "title": "Army D-90",
+      "rating": { "count": 350, "rate": 3.8 },
+      "price": 32,
+      "category": "men t-shirt",
+      "status": "new",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+
+    {
+      "id": "s-13",
+      "image": "./img/products/n5.jpg",
+      "brand": "Nike",
+      "title": "Blue-Quiet S-22",
+      "rating": { "count": 350, "rate": 3.5 },
+      "price": 38,
+      "category": "men t-shirt",
+      "status": "new",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+
+    {
+      "id": "s-14",
+      "image": "./img/products/n6.jpg",
+      "brand": "Versace",
+      "title": "Normal Short",
+      "rating": { "count": 350, "rate": 3.8 },
+      "price": 60,
+      "category": "men t-shirt",
+      "status": "new",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+    {
+      "id": "s-15",
+      "image": "./img/products/n7.jpg",
+      "brand": "Zara",
+      "title": "Zara s-80",
+      "rating": { "count": 350, "rate": 4 },
+      "price": 40,
+      "category": "men t-shirt",
+      "status": "new",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Iure facere reiciendis \n dolore voluptatum deleniti adipisci libero, quas \n quibusdam, consectetur voluptas itaque ipsam inventore pariatur"
+    },
+    {
+      "id": "s-16",
+      "image": "./img/products/n8.jpg",
+      "brand": "Gucci",
+      "title": "Gucci Black 14",
+      "rating": { "count": 350, "rate": 5 },
+      "price": 210,
+      "category": "men t-shirt",
+      "status": "new",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptate."
+    }
+  ]
+}

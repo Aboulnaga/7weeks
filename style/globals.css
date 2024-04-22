@@ -3,6 +3,15 @@
 :root {
   --prim: #1a1a1a;
   --primRgb: 26, 26, 26;
+  --prim75: #474646;
+  --prim75Rgb: 71, 70, 70;
+  --prim50: #858585;
+  --prim50Rgb: 133, 133, 133;
+  --prim25: #c2c2c2;
+  --prim25Rgb: 194, 194, 194;
+  --prim10: #e5e5e5;
+  --prim10Rgb: 229, 229, 229;
+
   --sec: #088178;
   --secRgb: 8, 129, 120;
   --blue: #e3e6f3;
@@ -11,6 +20,14 @@
   --prim-font: "Roboto", sans-serif;
   --sec-font: "Montserrat", sans-serif;
 
+  --line-height: 1.2;
+  --bgf48: 3.5rem;
+  --h1: 3rem;
+  --h2: 2rem;
+  --h3: 1.5rem;
+  --h4: 1.25rem;
+  --h5: 1.125rem;
+  --h6: 1rem;
   --smf9: 0.9rem;
   --smf8: 0.8rem;
   --smf7: 0.7rem;
