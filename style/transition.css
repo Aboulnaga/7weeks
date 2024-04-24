@@ -1,0 +1,67 @@
+#landing-main {
+  view-transition-name: pagemain;
+}
+
+#shop-main {
+  view-transition-name: pagemain;
+}
+
+::view-transition-old(pagemain) {
+  animation: fadeout 1s ease-in-out forwards;
+}
+
+::view-transition-new(pagemain) {
+  animation: fadein 1s ease-in-out forwards;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* #home-trans,
+#shop-trans {
+  position: fixed;
+  inset: 0;
+  background-color: var(--sec);
+  z-index: 5000;
+  transform: translateY(-150%);
+  view-transition-name: trans;
+}
+
+
+
+::view-transition-old(trans) {
+  animation: fadeout 1s ease-in-out forwards;
+}
+
+@keyframes fadeout {
+  to {
+    transform: translateY(200%);
+  }
+}
+
+::view-transition-new(trans) {
+  animation: fadein 1s ease-in-out forwards;
+}
+
+@keyframes fadein {
+  to {
+    transform: translateY(250%);
+    background-color: red;
+  }
+} */

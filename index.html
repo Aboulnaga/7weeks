@@ -9,6 +9,7 @@
       referrerpolicy="no-referrer"
     />
     <meta charset="UTF-8" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>7Weeks Store - home</title>
     <link rel="shortcut icon" href="./img/7weeks-fav.svg" type="image/x-icon" />
@@ -21,8 +22,10 @@
     <link rel="stylesheet" href="./style/bigBanner.css" />
     <link rel="stylesheet" href="./style/news.css" />
     <link rel="stylesheet" href="./style/footer.css" />
+    <link rel="stylesheet" href="./style/transition.css" />
   </head>
   <body>
+    <div id="home-trans"></div>
     <!-------------------------- Header Start --------------------------  -->
     <header>
       <div class="max container">
@@ -37,9 +40,9 @@
         <nav id="main-nav">
           <ul>
             <li><a href="/" class="active">Home</a></li>
-            <li><a href="/shop.html"> Shop</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="pages/shop.html"> Shop</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/">Contact</a></li>
             <li id="lg-bag">
               <a href="cart.html"
                 ><i class="icon far fa-shopping-bag icon"></i
@@ -55,164 +58,164 @@
       </div>
     </header>
     <!-------------------------- Header end --------------------------  -->
+    <main id="landing-main">
+      <!-------------------------- hero start --------------------------  -->
+      <section id="hero">
+        <video autoplay loop src="./img/shopping-video.mp4"></video>
+        <div class="container max">
+          <h6>Upgrade. Save. Enjoy.</h6>
+          <h3>Exceptional savings</h3>
+          <h2>On all products</h2>
+          <p>Maximize savings with coupons & discounts up to 70%!</p>
+          <button>Shop Now</button>
+        </div>
+      </section>
+      <!-------------------------- hero end --------------------------  -->
 
-    <!-------------------------- hero start --------------------------  -->
-    <section id="hero">
-      <video autoplay loop src="./img/shopping-video.mp4"></video>
-      <div class="container max">
-        <h6>Upgrade. Save. Enjoy.</h6>
-        <h3>Exceptional savings</h3>
-        <h2>On all products</h2>
-        <p>Maximize savings with coupons & discounts up to 70%!</p>
-        <button>Shop Now</button>
-      </div>
-    </section>
-    <!-------------------------- hero end --------------------------  -->
-
-    <!-------------------------- feature start --------------------------  -->
-    <section id="feature">
-      <div class="container max">
-        <div>
-          <img src="./img/features/f1.png" alt="feature" />
-          <p>Free Shipping</p>
-        </div>
-        <div>
-          <img src="./img/features/f2.png" alt="feature" />
-          <p>Online Order</p>
-        </div>
-        <div>
-          <img src="./img/features/f3.png" alt="feature" />
-          <p>Save Money</p>
-        </div>
-        <div>
-          <img src="./img/features/f4.png" alt="feature" />
-          <p>Promotions</p>
-        </div>
-        <div>
-          <img src="./img/features/f5.png" alt="feature" />
-          <p>Happy Sell</p>
-        </div>
-        <div>
-          <img src="./img/features/f6.png" alt="feature" />
-          <p>F24/7 Support</p>
-        </div>
-      </div>
-    </section>
-    <!-------------------------- feature end --------------------------  -->
-
-    <!-------------------------- feature products start --------------------------  -->
-    <section id="featured-products" class="products-section">
-      <div class="container max">
-        <div class="sec-title">
-          <h2>Featured Products</h2>
-          <p>Summer Collection New Modern Design</p>
-        </div>
-
-        <div class="products">
-          <!-- products here from js -->
-        </div>
-      </div>
-    </section>
-    <!-------------------------- feature products end --------------------------  -->
-
-    <!-------------------------- banner start --------------------------  -->
-    <section id="banner">
-      <h4>Repair Services</h4>
-      <h2>Up to <span>70% Off</span> - All t-Shirts & Accessories</h2>
-      <button>Explore More</button>
-    </section>
-
-    <!-------------------------- banner end --------------------------  -->
-
-    <!-------------------------- new collection products start --------------------------  -->
-    <section id="new-collection-products" class="products-section">
-      <div class="container max">
-        <div class="sec-title">
-          <h2>New Collection</h2>
-          <p>new collection of summer</p>
-        </div>
-
-        <div class="products">
-          <!-- products here from js -->
-        </div>
-      </div>
-    </section>
-    <!-------------------------- new collection products end --------------------------  -->
-
-    <!-------------------------- big banner start --------------------------  -->
-    <section id="big-banner">
-      <div class="container max">
-        <div class="b1">
-          <div class="img">
-            <img src="../img/banner/b17.jpg" alt="" />
+      <!-------------------------- feature start --------------------------  -->
+      <section id="feature">
+        <div class="container max">
+          <div>
+            <img src="./img/features/f1.png" alt="feature" />
+            <p>Free Shipping</p>
           </div>
+          <div>
+            <img src="./img/features/f2.png" alt="feature" />
+            <p>Online Order</p>
+          </div>
+          <div>
+            <img src="./img/features/f3.png" alt="feature" />
+            <p>Save Money</p>
+          </div>
+          <div>
+            <img src="./img/features/f4.png" alt="feature" />
+            <p>Promotions</p>
+          </div>
+          <div>
+            <img src="./img/features/f5.png" alt="feature" />
+            <p>Happy Sell</p>
+          </div>
+          <div>
+            <img src="./img/features/f6.png" alt="feature" />
+            <p>F24/7 Support</p>
+          </div>
+        </div>
+      </section>
+      <!-------------------------- feature end --------------------------  -->
+
+      <!-------------------------- feature products start --------------------------  -->
+      <section id="featured-products" class="products-section">
+        <div class="container max">
+          <div class="sec-title">
+            <h2>Featured Products</h2>
+            <p>Summer Collection New Modern Design</p>
+          </div>
+
+          <div class="products">
+            <!-- products here from js -->
+          </div>
+        </div>
+      </section>
+      <!-------------------------- feature products end --------------------------  -->
+
+      <!-------------------------- banner start --------------------------  -->
+      <section id="banner">
+        <h4>Repair Services</h4>
+        <h2>Up to <span>70% Off</span> - All t-Shirts & Accessories</h2>
+        <button>Explore More</button>
+      </section>
+
+      <!-------------------------- banner end --------------------------  -->
+
+      <!-------------------------- new collection products start --------------------------  -->
+      <section id="new-collection-products" class="products-section">
+        <div class="container max">
+          <div class="sec-title">
+            <h2>New Collection</h2>
+            <p>new collection of summer</p>
+          </div>
+
+          <div class="products">
+            <!-- products here from js -->
+          </div>
+        </div>
+      </section>
+      <!-------------------------- new collection products end --------------------------  -->
+
+      <!-------------------------- big banner start --------------------------  -->
+      <section id="big-banner">
+        <div class="container max">
+          <div class="b1">
+            <div class="img">
+              <img src="../img/banner/b17.jpg" alt="" />
+            </div>
+            <div class="info">
+              <h4>crazy deals</h4>
+              <h2>buy 1 get 1 free</h2>
+              <p>The best classic dress is on sale at cara</p>
+              <button class="white">Learn More</button>
+            </div>
+          </div>
+          <div class="b2">
+            <div class="img"><img src="../img/banner/b10.jpg" alt="" /></div>
+            <div class="info">
+              <h4>spring/summer</h4>
+              <h2>upcoming season</h2>
+              <p>The best classic dress is on sale at cara</p>
+              <button class="white">Collection</button>
+            </div>
+          </div>
+          <div class="b3">
+            <div class="img">
+              <img src="../img/banner/b7.jpg" alt="" />
+            </div>
+            <div class="info">
+              <h2>SEASONAL SALE</h2>
+              <h3>Winter Collection -50% OFF</h3>
+            </div>
+          </div>
+          <div class="b4">
+            <div class="img">
+              <img src="../img/banner/b4.jpg" alt="" />
+            </div>
+            <div class="info">
+              <h2>NEW FOOTWEAR COLLECTION</h2>
+              <h3>Spring/Summer 2023</h3>
+            </div>
+          </div>
+          <div class="b5">
+            <div class="img">
+              <img src="../img/banner/b18.jpg" alt="" />
+            </div>
+            <div class="info">
+              <h2>T-SHIRTS</h2>
+              <h3>New Trending News</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-------------------------- big banner end --------------------------  -->
+
+      <!-------------------------- news start --------------------------  -->
+      <section id="newsletter">
+        <div class="container max">
           <div class="info">
-            <h4>crazy deals</h4>
-            <h2>buy 1 get 1 free</h2>
-            <p>The best classic dress is on sale at cara</p>
-            <button class="white">Learn More</button>
+            <h2>Sign Up For Newsletters</h2>
+            <p>
+              Get E-mail updates about our latest shop and
+              <span>special offers.</span>
+            </p>
+          </div>
+          <div class="form">
+            <form>
+              <input type="text" placeholder="Your email adress" />
+              <button class="normal">Sign Up</button>
+            </form>
           </div>
         </div>
-        <div class="b2">
-          <div class="img"><img src="../img/banner/b10.jpg" alt="" /></div>
-          <div class="info">
-            <h4>spring/summer</h4>
-            <h2>upcoming season</h2>
-            <p>The best classic dress is on sale at cara</p>
-            <button class="white">Collection</button>
-          </div>
-        </div>
-        <div class="b3">
-          <div class="img">
-            <img src="../img/banner/b7.jpg" alt="" />
-          </div>
-          <div class="info">
-            <h2>SEASONAL SALE</h2>
-            <h3>Winter Collection -50% OFF</h3>
-          </div>
-        </div>
-        <div class="b4">
-          <div class="img">
-            <img src="../img/banner/b4.jpg" alt="" />
-          </div>
-          <div class="info">
-            <h2>NEW FOOTWEAR COLLECTION</h2>
-            <h3>Spring/Summer 2023</h3>
-          </div>
-        </div>
-        <div class="b5">
-          <div class="img">
-            <img src="../img/banner/b18.jpg" alt="" />
-          </div>
-          <div class="info">
-            <h2>T-SHIRTS</h2>
-            <h3>New Trending News</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-------------------------- big banner end --------------------------  -->
-
-    <!-------------------------- news start --------------------------  -->
-    <section id="newsletter">
-      <div class="container max">
-        <div class="info">
-          <h2>Sign Up For Newsletters</h2>
-          <p>
-            Get E-mail updates about our latest shop and
-            <span>special offers.</span>
-          </p>
-        </div>
-        <div class="form">
-          <form>
-            <input type="text" placeholder="Your email adress" />
-            <button class="normal">Sign Up</button>
-          </form>
-        </div>
-      </div>
-    </section>
-    <!-------------------------- news end --------------------------  -->
-
+      </section>
+      <!-------------------------- news end --------------------------  -->
+    </main>
     <!-------------------------- Footer start --------------------------  -->
     <footer>
       <div class="container max">
@@ -313,16 +316,16 @@
             <div class="app">
               <h5>Download App</h5>
               <ul>
-                <li><img src="img/pay/app.jpg" alt="App img" /></li>
+                <li><img src="/img/pay/app.jpg" alt="App img" /></li>
                 <li>
-                  <img src="img/pay/play.jpg" alt="App img" />
+                  <img src="/img/pay/play.jpg" alt="App img" />
                 </li>
               </ul>
             </div>
 
             <div class="payment">
               <p>Secured Payment Gateways</p>
-              <img src="img/pay/pay.png" />
+              <img src="/img/pay/pay.png" />
             </div>
           </div>
         </div>
@@ -341,6 +344,15 @@
     </footer>
     <!-------------------------- Footer end --------------------------  -->
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script type="module" src="./script/transition.js"></script>
+    <script src="./script/fetchAllProducts.js" type="module"></script>
     <script src="./script/index.js" type="module"></script>
   </body>
 </html>

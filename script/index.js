@@ -1,88 +1,86 @@
+import fetchAllProducts from "./fetchAllProducts.js";
+import setProductsInHtml from "./setProductsInHtml.js";
 const featuredProducts = document.querySelector("#featured-products .products");
 const newProducts = document.querySelector(
   "#new-collection-products .products"
 );
 
-console.log(featuredProducts, newProducts);
+gsap.registerPlugin(ScrollTrigger);
 
-// fetch const data
-const fetchStaticData = async () => {
+const getData = async () => {
   try {
-    const fake = await fetch("https://fakestoreapi.com/products");
-    const fakeProducts = await fake.json();
-    const res = await fetch("./script/staticDb.json");
-    const data = await res.json();
-    const allProducts = [...fakeProducts, ...data.staticDb];
-    console.log(allProducts);
-    setDataInHtml({
-      data: data.staticDb,
+    const fetchData = await fetchAllProducts();
+    const data = fetchData.allProducts;
+    // console.log(data);
+    setProductsInHtml({
+      data: data,
       status: "featured",
       parentDiv: featuredProducts,
     });
-    setDataInHtml({
-      data: data.staticDb,
+    setProductsInHtml({
+      data: data,
       status: "new",
       parentDiv: newProducts,
     });
+
+    animateProductsCards(data);
   } catch (err) {
-    throw new Error(err);
+    console.log(err);
   }
 };
+getData();
 
-fetchStaticData();
+const animateProductsCards = data => {
+  const featuredProductParent = document.querySelectorAll(
+    "#featured-products .products"
+  );
+  const featuredProduct = document.querySelectorAll(
+    "#featured-products .product"
+  );
+  const newProductParent = document.querySelectorAll(
+    "#new-collection-products .products"
+  );
+  const newProduct = document.querySelectorAll(
+    "#new-collection-products .product"
+  );
 
-{
-  /* <div class="product">
-            <div class="img">
-              <img src="img/products/f1.jpg" alt="product-img" />
-            </div>
-            <div class="info">
-              <span>adidas</span>
-              <h5>Cartoon Astronaut T-Shirts</h5>
-              <div class="star">
-                <i class="fas fa-star icon"></i>
-                <i class="fas fa-star icon"></i>
-                <i class="fas fa-star icon"></i>
-                <i class="fas fa-star icon"></i>
-                <i class="fas fa-star icon"></i>
-              </div>
-              <h4>$78</h4>
-            </div>
-          </div> */
-}
-
-function setDataInHtml({ data, status, parentDiv }) {
-  const filterProducts = data.filter(item => item.status === status);
-  filterProducts.map(product => {
-    const rateStars = `<i class="fas fa-star icon"></i>`.repeat(
-      product.rating.rate
-    );
-    const formattedPrice = product.price.toLocaleString("en-US", {
-      style: "currency",
-      currency: "USD",
-    });
-    const productUrl = product.title.split(" ").join("-").toLowerCase();
-    // console.log(rateStars);
-    parentDiv.innerHTML += `
-<div class="product">
-  <div class="img">
-  <a href="/pages/product.html?ID=${product.id}&Product=${productUrl}">
-   <img src="${product.image}" alt="product-img" /> </a>
-  </div>
-  <div class="info">
-    <p class="brand">${product.brand}</p>
-    <a href="/pages/product.html?ID=${product.id}&Product=${productUrl}">
- <p class="title">${product.title}</p> </a>
-    <div class="rate">
-    <span class="stars">${rateStars}</span> - <span class="count">(${product.rating.count})</span>
-    </div>
-    <div class="buy">
-      <div class="price">${formattedPrice}</div>
-      <div class="add-to-cart"><button><i class="fa-solid fa-cart-shopping"></i></button></div>
-    </div>
-  </div>
-</div>
-
-`;
+  // featured product timeline
+  let featuredTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: featuredProductParent,
+      // markers: true,
+      start: "top bottom",
+      end: "bottom center",
+      scrub: 2,
+      onLeave: function (self) {
+        self.disable();
+        self.animation.progress(1);
+      },
+    },
   });
-}
+  featuredTl.fromTo(
+    featuredProduct,
+    { opacity: 0, scale: 0.7 },
+    { opacity: 1, scale: 1, duration: 7, stagger: 3 }
+  );
+
+  // new collection product timeline
+  let newCollectionTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: newProductParent,
+      // markers: true,
+      start: "top bottom",
+      end: "bottom center",
+      scrub: 3,
+      onLeave: function (self) {
+        self.disable();
+        self.animation.progress(1);
+      },
+    },
+  });
+  newCollectionTl.fromTo(
+    newProduct,
+    { opacity: 0, scale: 0.7 },
+    { opacity: 1, scale: 1, duration: 7, stagger: 3 }
+  );
+};
