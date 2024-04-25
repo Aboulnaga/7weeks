@@ -1,6 +1,7 @@
 // imports
 import fetchAllProducts from "./fetchAllProducts.js";
 import setProductsInHtml from "./setProductsInHtml.js";
+import { noDataIcon } from "./svgIcons.js";
 
 // selectors
 const filterUl = document.querySelector(".filter-ul");
@@ -29,6 +30,10 @@ async function handleData() {
 
   // use filter function in shop page to filter products
   useFilterTabs(allProducts, categoriesLi);
+
+  const productsCards = document.querySelectorAll(".products-section .product");
+  // console.log(productsCards);
+  infinityScroll(productsCards);
 }
 handleData();
 
@@ -66,7 +71,7 @@ function useSearch(allProducts, categoriesLi) {
       );
 
       if (searchResult.length === 0) {
-        console.log("no result found");
+        // console.log("no result found");
         return noData();
       }
 
@@ -86,19 +91,23 @@ function useSearch(allProducts, categoriesLi) {
         parentDiv: productsDiv,
       });
     }
+
+    const cardsDiv = document.querySelectorAll(".products-section .product");
+    infinityScroll(cardsDiv);
   });
 }
 
 function useFilterTabs(allProducts, categoriesLi) {
   categoriesLi.forEach(li => {
     li.addEventListener("click", e => {
+      const noDataDiv = document.querySelector(".no-data");
+      if (noDataDiv) noDataDiv.remove();
       productsDiv.innerHTML = "";
-
+      searchInput.value = "";
       categoriesLi.forEach(li => {
         li.classList.remove("active");
       });
       e.target.classList.add("active");
-
       const filteredProducts = allProducts.filter(product => {
         if (e.target.textContent === "All") {
           return product;
@@ -109,12 +118,15 @@ function useFilterTabs(allProducts, categoriesLi) {
 
       productsContainerDiv.appendChild(productsDiv);
 
-      console.log(filteredProducts);
+      // console.log(filteredProducts);
       setProductsInHtml({
         data: filteredProducts,
         status: "All",
         parentDiv: productsDiv,
       });
+
+      const cardsDiv = document.querySelectorAll(".products-section .product");
+      infinityScroll(cardsDiv);
     });
   });
 }
@@ -123,6 +135,10 @@ function noData() {
   productsContainerDiv.innerHTML = "";
   const noDataDiv = document.createElement("div");
   noDataDiv.classList.add("no-data");
+  const noDataIconDiv = document.createElement("div");
+  noDataIconDiv.classList.add("no-data-icon");
+  noDataIconDiv.innerHTML = noDataIcon;
+  noDataDiv.appendChild(noDataIconDiv);
   const noDataH2 = document.createElement("h2");
   noDataH2.textContent = "No Data Found";
   noDataDiv.appendChild(noDataH2);
@@ -130,6 +146,28 @@ function noData() {
   noDataP.textContent = "Please Try Another Keyword";
   noDataDiv.appendChild(noDataP);
   productsContainerDiv.appendChild(noDataDiv);
+}
+
+function infinityScroll(productsCards) {
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show-card");
+          observer.unobserve(entry.target);
+          // console.log(entry.target);
+          // console.log(productsCards);
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+    }
+  );
+
+  productsCards.forEach(productCard => {
+    observer.observe(productCard);
+  });
 }
 
 // events

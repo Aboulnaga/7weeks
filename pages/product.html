@@ -1,11 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="../script/productMetaTag.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="view-transition" content="same-origin" />
+    <title>7weeks - product</title>
+    <link rel="shortcut icon" href="/img/7weeks-fav.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../style/globals.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/footer.css" />
+    <link rel="stylesheet" href="../style/news.css" />
+    <link rel="stylesheet" href="../style/shop/breadcrumb.css" />
+    <link rel="stylesheet" href="../style/shop/products_filters.css" />
+    <link rel="stylesheet" href="../style/transition.css" />
+    <link rel="stylesheet" href="../style/Product/relatedAndRecomenden.css" />
+    <link rel="stylesheet" href="../style/Product/product.css" />
   </head>
   <body>
+    <!------------------------------ header start --------------------------->
+    <header>
+      <div class="max container">
+        <div class="logo">
+          <h1>
+            <a href="/">
+              <i class="icon fa-solid fa-7"></i>
+              Weeks
+            </a>
+          </h1>
+        </div>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/shop.html"> Shop</a></li>
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/contact.html">Contact</a></li>
+            <li id="lg-bag">
+              <a href="cart.html"
+                ><i class="icon far fa-shopping-bag icon"></i
+              ></a>
+            </li>
+            <!-- <a href="#" id="close"><i class="far fa-xmark icon"></i></a> -->
+          </ul>
+        </nav>
+        <div id="right-nav">
+          <a href="cart.html"><i class="far fa-shopping-bag icon"></i></a>
+          <i id="burger-menu" class="fas fa-outdent"></i>
+        </div>
+      </div>
+    </header>
+    <!------------------------------ header end --------------------------->
+
+    <main id="product-main">
+      <!------------------------------ breadcrumb start --------------------------->
+      <section id="breadcrumb">
+        <h2>#Our Shop</h2>
+        <p>Save more with coupons & up to 70% off!</p>
+      </section>
+      <!------------------------------ breadcrumb end --------------------------->
+
+      <section class="hero">
+        <div class="container max">
+          <div class="product">
+            <!-- render product here from js -->
+          </div>
+        </div>
+      </section>
+
+      <section id="related-products" class="products-section">
+        <div class="container max">
+          <div class="sec-title">
+            <h2>Related Products</h2>
+            <p>this is related products</p>
+          </div>
+          <div class="products">
+            <!-- products here from shop.js -->
+          </div>
+        </div>
+      </section>
+      <section id="recommended-products" class="products-section">
+        <div class="container max">
+          <div class="sec-title">
+            <h2>Recommended Products</h2>
+            <p>this is recommended products</p>
+          </div>
+          <div class="products">
+            <!-- products here from shop.js -->
+          </div>
+        </div>
+      </section>
+
+      <section id="newsletter">
+        <div class="container max">
+          <div class="info">
+            <h2>Sign Up For Newsletters</h2>
+            <p>
+              Get E-mail updates about our latest shop and
+              <span>special offers.</span>
+            </p>
+          </div>
+          <div class="form">
+            <form>
+              <input type="text" placeholder="Your email adress" />
+              <button class="normal">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!------------------------------ footer start --------------------------->
+    <footer>
+      <div class="container max">
+        <div class="row1">
+          <!-- col1 start-->
+          <div class="col col1">
+            <div class="logo">
+              <h2>
+                <a href="/">
+                  <i class="icon fa-solid fa-7"></i>
+                  Weeks
+                </a>
+              </h2>
+            </div>
+
+            <div class="contact">
+              <h5>Contact</h5>
+              <ul>
+                <li><strong>Address: </strong>DownTown Cairo, Egypt</li>
+                <li><strong>Phone: </strong>010000000</li>
+                <li><strong>Hours: </strong>09:00 - 20:30.Daily</li>
+              </ul>
+            </div>
+            <div class="follow">
+              <h5>Follow us</h5>
+              <ul>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a target="_blank" href="#"><i class="fab fa-codepen"></i></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- col1 end -->
+
+          <!-- col2 start -->
+          <div class="col about">
+            <h5>About</h5>
+            <ul>
+              <li>
+                <a href="#">About us</a>
+              </li>
+
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col account">
+            <h5>Account</h5>
+            <ul>
+              <li>
+                <a href="#">Sign In</a>
+              </li>
+              <li>
+                <a href="#">View Cart</a>
+              </li>
+              <li>
+                <a href="#">My Wishlist</a>
+              </li>
+              <li>
+                <a href="#">Track My Order</a>
+              </li>
+              <li>
+                <a href="#">Help</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- col4 start -->
+          <div class="col col4">
+            <div class="app">
+              <h5>Download App</h5>
+              <ul>
+                <li><img src="/img/pay/app.jpg" alt="App img" /></li>
+                <li>
+                  <img src="/img/pay/play.jpg" alt="App img" />
+                </li>
+              </ul>
+            </div>
+
+            <div class="payment">
+              <p>Secured Payment Gateways</p>
+              <img src="/img/pay/pay.png" />
+            </div>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="copyright">
+            <p>
+              &copy; 2024,
+              <span
+                ><span style="color: #088178">Ahmed Aboulnaga</span> - 7weeks
+                store</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!------------------------------ footer end --------------------------->
+
     <script src="../script/product.js" type="module"></script>
   </body>
 </html>

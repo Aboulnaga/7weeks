@@ -1,0 +1,15 @@
+.no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.no-data-icon {
+  display: none;
+  /* max-width: 500px; */
+  svg {
+    width: 240px;
+  }
+}

@@ -1,5 +1,6 @@
 .products-section {
   /* border: 1px solid red; */
+  overflow: hidden;
   padding: 2rem 0;
 }
 
@@ -30,6 +31,9 @@
   padding: 0.5rem;
   border-radius: 0.5rem;
   display: flex;
+  opacity: 0;
+  transform: translate(50%, 10%) scale(0.8) rotate(7deg) skew(7deg);
+  transition: all 1s ease;
   flex-direction: column;
   justify-content: space-between;
   /* border: 1px solid red; */
@@ -120,6 +124,11 @@
   .price {
     font-weight: 600;
   }
+}
+
+.products-section .products .show-card {
+  opacity: 1;
+  transform: translate(0%, 0%) scale(1) rotate(0deg) skew(0deg);
 }
 
 @media (width > 768px) {

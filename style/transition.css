@@ -7,11 +7,11 @@
 }
 
 ::view-transition-old(pagemain) {
-  animation: fadeout 1s ease-in-out forwards;
+  animation: fadeout 0.5s ease-in-out forwards;
 }
 
 ::view-transition-new(pagemain) {
-  animation: fadein 1s ease-in-out forwards;
+  animation: fadein 0.5s ease-in-out forwards;
 }
 
 @keyframes fadeout {
