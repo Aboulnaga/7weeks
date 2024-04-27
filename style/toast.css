@@ -1,0 +1,120 @@
+#toasts {
+  position: fixed;
+  bottom: 10px;
+  right: 16px;
+  z-index: 9999;
+  width: calc(100% - 32px);
+  overflow: hidden;
+  background-color: transparent;
+  padding: 0.4rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: all 0.5s ease;
+  /* background-color: red; */
+  visibility: hidden;
+}
+.toast {
+  background-color: white;
+  padding: 0.5rem;
+  box-shadow: 1px 1px 10px rgba(var(--primRgb), 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(120%);
+  transition: all 0.5s ease;
+}
+
+.active-toast {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0%);
+}
+
+@media (width > 768px) {
+  #toasts {
+    max-width: 480px;
+  }
+}
+
+#toast .bar {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--sec);
+  animation: progress 3s ease-in-out forwards;
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* #toast:hover .bar {
+  background-color: red;
+  animation-play-state: paused;
+} */
+
+#toast .container {
+  display: flex;
+  gap: 1rem;
+}
+
+#toast .container .msg {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#toast .container .msg button {
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  color: var(--sec);
+  border: 1px solid var(--sec);
+  border-radius: 0.5rem;
+}
+#toast .container .msg button:hover {
+  background-color: var(--sec);
+  color: white;
+  border: 1px solid var(--sec);
+}
+
+#toast .container .img {
+  flex: 1;
+  /* width: 80px; */
+  /* height: 80px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  height: 100%;
+}
+
+#toast .container .close {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--prim);
+  color: var(--blue);
+  transition: all 0.5s ease;
+}
+
+#toast .container .close:hover {
+  background-color: var(--sec);
+  color: var(--blue);
+}
+#toast .container .close .icon {
+  pointer-events: none;
+}

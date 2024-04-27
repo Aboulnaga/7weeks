@@ -5,7 +5,7 @@ import { noDataIcon } from "./svgIcons.js";
 
 // selectors
 const filterUl = document.querySelector(".filter-ul");
-const productsDiv = document.querySelector(".products");
+const productsDiv = document.querySelector(".products-section .products");
 const productsContainerDiv = document.querySelector(
   ".products-section .container"
 );
@@ -66,13 +66,15 @@ function useSearch(allProducts, categoriesLi) {
     productsDiv.innerHTML = "";
     const searchValue = e.target.value;
     if (searchValue) {
+      console.log(searchValue);
       const searchResult = allProducts.filter(item =>
         item.title.toLowerCase().includes(searchValue.toLowerCase())
       );
 
       if (searchResult.length === 0) {
-        // console.log("no result found");
-        return noData();
+        console.log("no result found");
+        noData();
+        return;
       }
 
       const noDataDiv = document.querySelector(".no-data");
@@ -84,6 +86,9 @@ function useSearch(allProducts, categoriesLi) {
         parentDiv: productsDiv,
       });
     } else {
+      const noDataDiv = document.querySelector(".no-data");
+      if (noDataDiv) noDataDiv.remove();
+      productsContainerDiv.appendChild(productsDiv);
       categoriesLi[0].classList.add("active");
       setProductsInHtml({
         data: allProducts,

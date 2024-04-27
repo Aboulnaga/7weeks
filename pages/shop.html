@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="../style/transition.css" />
     <link rel="stylesheet" href="../style/shop/shopProducts.css" />
     <link rel="stylesheet" href="../style/shop/noData.css" />
+    <link rel="stylesheet" href="../style/productsCartMenu.css" />
+    <link rel="stylesheet" href="../style/toast.css" />
   </head>
   <body>
     <!------------------------------ header start --------------------------->
@@ -41,21 +43,49 @@
             <li><a class="active" href="/pages/shop.html"> Shop</a></li>
             <li><a href="/pages/about.html">About</a></li>
             <li><a href="/pages/contact.html">Contact</a></li>
-            <li id="lg-bag">
-              <a href="cart.html"
-                ><i class="icon far fa-shopping-bag icon"></i
-              ></a>
+            <li>
+              <button id="header-cart">
+                <i class="icon far fa-shopping-bag icon"></i>
+              </button>
             </li>
             <!-- <a href="#" id="close"><i class="far fa-xmark icon"></i></a> -->
           </ul>
         </nav>
         <div id="right-nav">
-          <a href="cart.html"><i class="far fa-shopping-bag icon"></i></a>
+          <button id="header-cart">
+            <i class="icon far fa-shopping-bag icon"></i>
+          </button>
           <i id="burger-menu" class="fas fa-outdent"></i>
         </div>
       </div>
     </header>
     <!------------------------------ header end --------------------------->
+
+    <!-------------------------- toast start --------------------------  -->
+    <div id="toasts">
+      <!-- all toasts will be added here -->
+    </div>
+    <!-------------------------- toast end --------------------------  -->
+
+    <!-------------------------- products cart menu start --------------------------  -->
+    <section class="cart-menu">
+      <div class="container">
+        <div class="header">
+          <h3>Your Cart</h3>
+        </div>
+        <div class="products"></div>
+        <div class="footer">
+          <div class="total">
+            <h3>Total</h3>
+            <h3>0</h3>
+          </div>
+          <div class="checkout">
+            <button>Checkout</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------------- products cart menu end --------------------------  -->
 
     <main id="shop-main">
       <!------------------------------ breadcrumb start --------------------------->
@@ -233,5 +263,6 @@
     </footer>
     <!------------------------------ footer end --------------------------->
     <script type="module" src="../script/shop.js"></script>
+    <script type="module" src="../script/productsCartMenu.js"></script>
   </body>
 </html>

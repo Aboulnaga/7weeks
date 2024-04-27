@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="./style/news.css" />
     <link rel="stylesheet" href="./style/footer.css" />
     <link rel="stylesheet" href="./style/transition.css" />
+    <link rel="stylesheet" href="./style/productsCartMenu.css" />
+    <link rel="stylesheet" href="./style/toast.css" />
   </head>
   <body>
     <div id="home-trans"></div>
@@ -43,20 +45,49 @@
             <li><a href="pages/shop.html"> Shop</a></li>
             <li><a href="pages/about.html">About</a></li>
             <li><a href="pages/">Contact</a></li>
-            <li id="lg-bag">
-              <a href="cart.html"
-                ><i class="icon far fa-shopping-bag icon"></i
-              ></a>
+            <li>
+              <button id="header-cart">
+                <i class="icon far fa-shopping-bag icon"></i>
+              </button>
             </li>
             <!-- <a href="#" id="close"><i class="far fa-xmark icon"></i></a> -->
           </ul>
         </nav>
         <div id="right-nav">
-          <a href="cart.html"><i class="far fa-shopping-bag icon"></i></a>
+          <button id="header-cart">
+            <i class="icon far fa-shopping-bag icon"></i>
+          </button>
           <i id="burger-menu" class="fas fa-outdent"></i>
         </div>
       </div>
     </header>
+
+    <!-------------------------- toast start --------------------------  -->
+    <div id="toasts">
+      <!-- all toasts will be added here -->
+    </div>
+    <!-------------------------- toast end --------------------------  -->
+
+    <!-------------------------- products cart menu start --------------------------  -->
+    <section class="cart-menu">
+      <div class="container">
+        <div class="header">
+          <h3>Your Cart</h3>
+        </div>
+        <div class="products"></div>
+        <div class="footer">
+          <div class="total">
+            <h3>Total</h3>
+            <h3>0</h3>
+          </div>
+          <div class="checkout">
+            <button>Checkout</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------------- products cart menu end --------------------------  -->
+
     <!-------------------------- Header end --------------------------  -->
     <main id="landing-main">
       <!-------------------------- hero start --------------------------  -->
@@ -351,8 +382,8 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script type="module" src="./script/transition.js"></script>
     <script src="./script/fetchAllProducts.js" type="module"></script>
     <script src="./script/index.js" type="module"></script>
+    <script type="module" src="./script/productsCartMenu.js"></script>
   </body>
 </html>

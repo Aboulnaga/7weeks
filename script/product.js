@@ -124,9 +124,9 @@ function renderProductInHtml(product) {
 
   <div class="sub">
     <div class="quantity">
-      <button>-</button>
+      <button class="decrease">-</button>
       <input type="number" value="1" min="1" max="100" />
-      <button>+</button>
+      <button class="increase">+</button>
     </div>
     <button class="add-to-cart">Add to cart</button>
   </div>

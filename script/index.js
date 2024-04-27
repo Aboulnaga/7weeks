@@ -8,27 +8,36 @@ const newProducts = document.querySelector(
 gsap.registerPlugin(ScrollTrigger);
 
 const getData = async () => {
-  try {
-    const fetchData = await fetchAllProducts();
-    const data = fetchData.allProducts;
-    // console.log(data);
-    setProductsInHtml({
-      data: data,
-      status: "featured",
-      parentDiv: featuredProducts,
-    });
-    setProductsInHtml({
-      data: data,
-      status: "new",
-      parentDiv: newProducts,
-    });
+  const fetchData = await fetchAllProducts();
+  const data = fetchData.allProducts;
+  // console.log(data);
+  setProductsInHtml({
+    data: data,
+    status: "featured",
+    parentDiv: featuredProducts,
+  });
+  setProductsInHtml({
+    data: data,
+    status: "new",
+    parentDiv: newProducts,
+  });
+  animateProductsCards(data);
 
-    animateProductsCards(data);
-  } catch (err) {
-    console.log(err);
-  }
+  // const addToCartBtns = [...document.querySelectorAll(".add-to-cart")];
+  // addItemToCart(addToCartBtns);
 };
 getData();
+
+function addItemToCart(addToCartBtns) {
+  addToCartBtns.map(btn => {
+    btn.addEventListener("click", e => {
+      const product = e.target.closest(".product");
+
+      console.log(product);
+      console.log(btn);
+    });
+  });
+}
 
 const animateProductsCards = data => {
   const featuredProductParent = document.querySelectorAll(
