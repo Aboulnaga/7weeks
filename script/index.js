@@ -5,13 +5,13 @@ const newProducts = document.querySelector(
   "#new-collection-products .products"
 );
 
-window.addEventListener("load", async () => {
-  const video = await document.querySelector("#hero video");
+// window.addEventListener("load", async () => {
+//   const video = await document.querySelector("#hero video");
 
-  console.log("video loaded");
-  video.play();
-  console.log(video);
-});
+//   console.log("video loaded");
+//   video.play();
+//   console.log(video);
+// });
 
 const getData = async () => {
   const fetchData = await fetchAllProducts();
@@ -27,7 +27,6 @@ const getData = async () => {
     status: "new",
     parentDiv: newProducts,
   });
-  gsap.registerPlugin(ScrollTrigger);
   animateFeaturedProductCards(data);
   animateNewcollectionCards(data);
 
@@ -48,6 +47,8 @@ function addItemToCart(addToCartBtns) {
 }
 
 function animateFeaturedProductCards(data) {
+  new gsap.registerPlugin(ScrollTrigger);
+
   const featuredProductParent = document.querySelector(
     "#featured-products .products"
   );
@@ -76,6 +77,7 @@ function animateFeaturedProductCards(data) {
   );
 }
 function animateNewcollectionCards(data) {
+  new gsap.registerPlugin(ScrollTrigger);
   const newProductParent = document.querySelector(
     "#new-collection-products .products"
   );
@@ -87,9 +89,9 @@ function animateNewcollectionCards(data) {
   let newCollectionTl = gsap.timeline({
     scrollTrigger: {
       trigger: newProductParent,
-      // markers: true,
-      start: "top top",
-      end: "bottom top",
+      markers: true,
+      start: "top bottom",
+      end: "bottom center",
       scrub: 3,
       onLeave: function (self) {
         self.disable();
