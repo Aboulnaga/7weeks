@@ -5,6 +5,14 @@ const newProducts = document.querySelector(
   "#new-collection-products .products"
 );
 
+window.addEventListener("load", async () => {
+  const video = await document.querySelector("#hero video");
+
+  console.log("video loaded");
+  video.play();
+  console.log(video);
+});
+
 const getData = async () => {
   const fetchData = await fetchAllProducts();
   const data = fetchData.allProducts;
