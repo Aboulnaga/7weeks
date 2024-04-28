@@ -28,7 +28,7 @@ async function getData() {
 getData();
 
 function setMetaData(product) {
-  console.log(product.description);
+  // console.log(product.description);
   document.title = `7weeks - ${product.title}`;
 }
 
@@ -216,7 +216,7 @@ function handleAddToCart(product, e) {
   const input = parentDiv.querySelector(".quan-input");
   const inputValue = parseInt(input.value);
   const updatedProduct = { ...product, quantity: parseInt(inputValue) };
-  console.log(updatedProduct);
+  // console.log(updatedProduct);
 
   const isProductsArrayInLocalStorage =
     checkIsProductsArrayInLocalStorage(updatedProduct);
@@ -225,8 +225,8 @@ function handleAddToCart(product, e) {
   if (!isProductInLocalStorage)
     return addNewProductToLocalStorage(updatedProduct);
   const updateProduct = doUpdateProduct(updatedProduct);
-  console.log(isProductInLocalStorage);
-  addToCart(updatedProduct);
+  // console.log(isProductInLocalStorage);
+  // addToCart(updatedProduct);
 }
 
 function checkIsProductsArrayInLocalStorage(product) {
