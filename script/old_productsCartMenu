@@ -147,16 +147,19 @@ function renderCartProductsInHtml(details) {
             <div class="increase">
             <!-- increase quantity btn -->
           </div>
-
-          <div class="remove">
-        <!-- remove btn -->
-      </div>
          
         </div>
         <!-- manage -->
       </div>
       <!-- main -->
-      
+      <div class="sub">
+        <div class="total">
+        <p>${formatTotal}</p>
+        </div>
+        <div class="remove">
+        <!-- remove btn -->
+      </div>
+      </div>
     </div>
     <!-- info -->
     `;

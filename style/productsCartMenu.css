@@ -1,5 +1,4 @@
 .cart-menu {
-  /* display: none; */
   position: fixed;
   inset: 0;
   z-index: 1000;
@@ -44,12 +43,15 @@
 
 .cart-menu .header,
 .cart-menu .footer {
-  background-color: var(--sec);
-  color: var(--blue);
+  background-color: white;
+  color: var(--prim);
   position: sticky;
   z-index: 10;
-  box-shadow: 1px 1px 8px rgba(var(--secRgb), 1);
+  box-shadow: 1px 1px 8px rgba(var(--primRgb), 0.4);
   padding: 1rem;
+  h3 {
+    font-size: var(--h5);
+  }
 }
 
 .cart-menu .header {
@@ -63,13 +65,11 @@
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  justify-self: end;
-  justify-content: end;
-  justify-items: end;
 }
 .cart-menu .footer .total {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
 }
 .cart-menu .footer .checkout {
   button {
@@ -163,75 +163,75 @@
 
 .cart-menu .info .main {
   /* background-color: red; */
+  padding: 0.5rem;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
+.cart-menu .info .main .product-link {
+  transition: all 0.3s ease;
+}
+.cart-menu .info .main .product-link:hover {
+  text-decoration: underline;
+}
+.cart-menu .info .main .icon {
+  color: var(--sec);
+}
 .cart-menu .info .main .manage {
   /* background-color: blue; */
+  width: 100%;
   display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
+.cart-menu .info .main .manage input[type="number"]::-webkit-outer-spin-button,
+.cart-menu .info .main .manage input[type="number"]::-webkit-inner-spin-button {
+  /* Hide the arrows */
+  display: none;
+}
+
 .cart-menu .info .main .manage input {
-  width: 70px;
+  width: 40px;
   text-align: center;
   padding: 0.5rem;
+  border: 2px solid transparent;
+  background-color: rgb(240, 240, 240);
+}
+.cart-menu .info .main .manage input:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid var(--sec);
+}
+.cart-menu .info .main .manage input:focus {
+  background-color: rgb(247, 247, 247);
 }
 .cart-menu .info .main .manage button {
   padding: 0.5rem;
   cursor: pointer;
-  background-color: var(--sec);
-  width: 32px;
-  color: var(--blue);
+  width: 40px;
+  color: var(--prim);
+  border: 1px solid var(--prim10);
 }
 
-.cart-menu .info .sub {
-  padding: 0 0.5rem;
-  /* background-color: red; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  flex-direction: column;
-}
-.cart-menu .info .sub .total {
-  display: flex;
-  background-color: var(--sec);
-  padding: 0.5rem;
-  color: var(--blue);
-  position: relative;
-  /* top: -10px; */
-}
-.cart-menu .info .sub .total p {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: center;
+.cart-menu .info .main .manage button:hover {
+  color: var(--sec);
 }
 
-.cart-menu .info .sub .remove {
+.cart-menu .info .main .remove {
   /* background-color: blue; */
   color: var(--sec);
-  /* font-size: 1.2rem; */
+
   border: 1px solid white;
   transition: all 0.3s ease;
+  background-color: white;
+  color: var(--prim);
+  margin-left: auto;
 }
-.cart-menu .info .sub .remove:hover {
+.cart-menu .info .main .remove:hover button {
   /* background-color: blue; */
   color: var(--warn);
-  /* font-size: 1.2rem; */
+  background-color: white;
+  color: var(--warn);
   border: 1px solid var(--warn);
 }
-/* 
-.cart-menu .info .manage {
-  display: flex;
-  justify-content: space-between;
-}
-.cart-menu .info .manage .quantity {
-  display: flex;
-  background-color: red;
-}
-.cart-menu .info .manage .quantity {
-  display: flex;
-  background-color: red;
-} */

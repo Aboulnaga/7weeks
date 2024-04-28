@@ -22,7 +22,6 @@ async function handleData() {
   const categoriesLi = document.querySelectorAll(".filter-ul li");
   categoriesLi[0].classList.add("active");
 
-  // const isSearchValue = checkSearchValueInLocalStorage();
   // set products in shop page for first time
   setAppProductsInHtmlForFirstTime(allProducts);
 

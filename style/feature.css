@@ -1,6 +1,8 @@
 #feature {
   /* background-color: red; */
   padding: 2rem 0;
+  background-color: white;
+  position: relative;
 }
 
 #feature .container {

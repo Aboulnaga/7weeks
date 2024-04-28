@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="../style/shop/noData.css" />
     <link rel="stylesheet" href="../style/productsCartMenu.css" />
     <link rel="stylesheet" href="../style/toast.css" />
+    <link rel="stylesheet" href="../style/burgerMenu.css" />
   </head>
   <body>
     <!------------------------------ header start --------------------------->
@@ -60,6 +61,103 @@
       </div>
     </header>
     <!------------------------------ header end --------------------------->
+
+    <!-------------------------- Burger menu start --------------------------  -->
+    <section id="burger" class="burger">
+      <div class="container">
+        <div class="menu">
+          <div class="header">
+            <div class="logo">
+              <a href="/">
+                <i class="icon fa-solid fa-7"></i>
+                Weeks
+              </a>
+            </div>
+
+            <div class="search">
+              <form>
+                <i class="search-icon fas fa-search"></i>
+
+                <input name="search" type="search" placeholder="search" />
+              </form>
+            </div>
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li>
+                <a href="/">
+                  <span><i class="home-icon fa-solid fa-house"></i></span>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li>
+                <a class="active" href="/pages/shop.html">
+                  <span><i class="shop-icon fa-solid fa-shop"></i></span>
+                  <span>Shop</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span
+                    ><i class="about-icon fa-solid fa-circle-info"></i
+                  ></span>
+                  <span>About</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span><i class="contact-icon fa-solid fa-phone"></i></span>
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="footer">
+            <nav class="sub-nav">
+              <ul>
+                <li>
+                  <button class="none">
+                    <div class="items">
+                      <span><i class="fa-solid fa-cart-arrow-down"></i></span>
+                      <span>items</span>
+                    </div>
+                    <div class="total">
+                      <span>0</span>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <span><i class="settings-icon fa-solid fa-gear"></i></span>
+                    <span>settings</span>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <span
+                      ><i class="support-icon fa-solid fa-headset"></i
+                    ></span>
+                    <span>Support</span>
+                  </button>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="user-info">
+              <div class="img">
+                <i class="user-img fa-solid fa-user"></i>
+              </div>
+              <div class="info">
+                <h6>John Doe</h6>
+                <p>user@example.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------------- Burger menu end --------------------------  -->
 
     <!-------------------------- toast start --------------------------  -->
     <div id="toasts">
@@ -264,5 +362,6 @@
     <!------------------------------ footer end --------------------------->
     <script type="module" src="../script/shop.js"></script>
     <script type="module" src="../script/productsCartMenu.js"></script>
+    <script type="module" src="../script/burgerMenu.js"></script>
   </body>
 </html>
