@@ -17,7 +17,7 @@ async function getData() {
   const product = data.find(product => product.id == id);
 
   //   console.log(product);
-  //   setMetaData(product);
+  setMetaData(product);
   renderProductInHtml(product);
   const randomRelated = randomRelatedProducts({ product, data });
   const randomRecommended = randomRecommendedProducts({ product, data });
@@ -30,65 +30,6 @@ getData();
 function setMetaData(product) {
   console.log(product.description);
   document.title = `7weeks - ${product.title}`;
-  document
-    .querySelector("meta[name='description']")
-    .setAttribute("content", product.description);
-
-  document
-    .querySelector("meta[property='og:title']")
-    .setAttribute("content", product.title);
-
-  document
-    .querySelector("meta[property='og:description']")
-    .setAttribute("content", product.description);
-
-  document
-    .querySelector("meta[property='og:image']")
-    .setAttribute("content", product.image);
-
-  document
-    .querySelector("meta[property='og:url']")
-    .setAttribute("content", window.location.href);
-
-  document
-    .querySelector("meta[property='og:type']")
-    .setAttribute("content", "website");
-
-  document
-    .querySelector("meta[property='og:site_name']")
-    .setAttribute("content", "7weeks");
-
-  document
-    .querySelector("meta[name='twitter:title']")
-    .setAttribute("content", product.title);
-
-  document
-    .querySelector("meta[name='twitter:description']")
-    .setAttribute("content", product.description);
-
-  document
-    .querySelector("meta[name='twitter:image']")
-    .setAttribute("content", product.image);
-
-  document
-    .querySelector("meta[name='twitter:url']")
-    .setAttribute("content", window.location.href);
-
-  document
-    .querySelector("meta[name='twitter:card']")
-    .setAttribute("content", "summary_large_image");
-
-  document
-    .querySelector("meta[name='twitter:site']")
-    .setAttribute("content", "@7weeks");
-
-  document
-    .querySelector("meta[name='twitter:creator']")
-    .setAttribute("content", "@7weeks");
-
-  document
-    .querySelector("meta[name='twitter:image:alt']")
-    .setAttribute("content", product.title);
 }
 
 function renderProductInHtml(product) {
