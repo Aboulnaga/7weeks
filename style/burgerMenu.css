@@ -105,8 +105,25 @@
   background-color: rgba(var(--secRgb), 0.2);
 }
 
+#burger .main-nav ul span:nth-child(1) {
+  /* background-color: red; */
+
+  i {
+    font-size: 1rem;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+#burger .main-nav ul span:nth-child(2) {
+  /* background-color: red; */
+  margin-left: 0.5rem;
+}
+
 #burger .main-nav ul .active {
   background-color: rgba(var(--secRgb), 0.2);
+  color: var(--sec);
 }
 
 #burger .menu .sub-nav {
@@ -131,6 +148,17 @@
 }
 #burger .sub-nav ul button:hover {
   background-color: rgba(var(--secRgb), 0.2);
+}
+#burger .sub-nav ul button span:nth-child(1) {
+  /* background-color: red; */
+  i {
+    font-size: 1.1rem;
+    /* background-color: red; */
+  }
+}
+#burger .sub-nav ul button span:nth-child(2) {
+  /* background-color: red; */
+  margin-left: 0.5rem;
 }
 
 #burger .sub-nav .none {

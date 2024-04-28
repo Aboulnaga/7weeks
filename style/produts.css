@@ -1,3 +1,10 @@
+#featured-products,
+#new-collection-products {
+  position: relative;
+  /* background-color: red; */
+  height: 140vh;
+  border: 1px solid red;
+}
 .products-section {
   /* border: 1px solid red; */
   background-color: white;
@@ -7,7 +14,8 @@
 .products-section .sec-title {
   /* background-color: red; */
   text-align: center;
-  margin: 5rem 0;
+  /* margin: 5rem 0; */
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
