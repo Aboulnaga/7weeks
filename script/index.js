@@ -66,92 +66,78 @@ function amimateHeroSection() {
 }
 
 function animateFeaturedProductCards(data) {
-  const featuredProductParent = document.querySelector(
+  const featuredProductsParentDiv = document.querySelector(
     "#featured-products .products"
   );
-  const featuredProduct = document.querySelectorAll(
-    "#featured-products .product"
+  const featuredProductCards = document.querySelectorAll(
+    "#featured-products .products .product"
   );
 
-  // featured product timeline
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: featuredProductParent,
-      markers: true,
-      start: "top bottom",
-      end: "bottom center",
-      scrub: 1,
-      // pin: true,
-      // pinSpacing: true,
-      onLeave: function (self) {
-        self.disable();
-        self.animation.progress(1);
-      },
-    },
+  const intersection = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // console.log(entry.target);
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: entry.target,
+            start: "top bottom",
+            end: "bottom center",
+            scrub: 1,
+            // markers: true,
+            onLeave: function (self) {
+              self.disable();
+              self.animation.progress(1);
+            },
+          },
+        });
+        tl.fromTo(
+          featuredProductCards,
+          { opacity: 0, scale: 0.7 },
+          { opacity: 1, scale: 1, duration: 3, stagger: 2.25 }
+        );
+
+        intersection.unobserve(entry.target);
+      }
+    });
   });
-  tl.fromTo(
-    featuredProduct,
-    { opacity: 0, scale: 0.7 },
-    { opacity: 1, scale: 1, stagger: 2.25, duration: 3 }
-  );
-}
 
+  intersection.observe(featuredProductsParentDiv);
+}
 function animateNewcollectionCards(data) {
-  const newProductParent = document.querySelector(
+  const newCollectionProductsParentDiv = document.querySelector(
     "#new-collection-products .products"
   );
-  const newProduct = document.querySelectorAll(
-    "#new-collection-products .product"
+  const newCollectionProductCards = document.querySelectorAll(
+    "#new-collection-products .products .product"
   );
 
-  // new collection product timeline
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: newProduct,
-      markers: true,
-      start: "top bottom",
-      end: "bottom top",
-      scrub: 1,
-      onLeave: function (self) {
-        self.disable();
-        self.animation.progress(1);
-      },
-    },
+  const intersection = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // console.log(entry.target);
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: entry.target,
+            start: "top bottom",
+            end: "bottom center",
+            scrub: 1,
+            // markers: true,
+            onLeave: function (self) {
+              self.disable();
+              self.animation.progress(1);
+            },
+          },
+        });
+        tl.fromTo(
+          newCollectionProductCards,
+          { opacity: 0, scale: 0.7 },
+          { opacity: 1, scale: 1, duration: 3, stagger: 2.25 }
+        );
+
+        intersection.unobserve(entry.target);
+      }
+    });
   });
-  tl.fromTo(
-    newProduct,
-    { opacity: 0, scale: 0.7 },
-    { opacity: 1, scale: 1, stagger: 2.25, duration: 3 }
-  );
+
+  intersection.observe(newCollectionProductsParentDiv);
 }
-
-// function animateFeaturedProductCards(data) {
-//   new gsap.registerPlugin(ScrollTrigger);
-
-//   const featuredProductParent = document.querySelector(
-//     "#featured-products .products"
-//   );
-//   const featuredProduct = document.querySelectorAll(
-//     "#featured-products .product"
-//   );
-
-//   // featured product timeline
-//   let featuredTl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: featuredProductParent,
-//       markers: true,
-//       start: "top bottom",
-//       end: "bottom center",
-//       scrub: 0.5,
-//       onLeave: function (self) {
-//         self.disable();
-//         self.animation.progress(1);
-//       },
-//     },
-//   });
-//   featuredTl.fromTo(
-//     featuredProduct,
-//     { opacity: 0, scale: 0.7 },
-//     { opacity: 1, scale: 1, duration: 7, stagger: 3 }
-//   );
-// }
